@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $client = Elasticsearch\ClientBuilder::create()->build();
+    var_dump($client);
 });
+
+Route::get('/users', [UserController::class, 'all']);
+//Route::post('/users', [UserController::class, 'create']);

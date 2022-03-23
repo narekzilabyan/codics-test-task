@@ -58,19 +58,4 @@ class UserController extends Controller
             'countries' => $countries
         ]);
     }
-
-//    public function create(Request $request) {
-//        $user = new User([
-//            'name'      => $request->get('name'),
-//            'lastName'  => $request->get('lastName'),
-//            'age'       => $request->get('age'),
-//            'country'   => $request->get('country'),
-//            'phone'     => $request->get('phone'),
-//            'email'     => $request->get('email'),
-//            'password'  => $request->get('password')
-//        ]);
-//        $user->save();
-//
-//        return $user;
-//    }
 }
